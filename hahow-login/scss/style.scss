@@ -1,0 +1,237 @@
+* {
+  // border: 1px solid;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: "Heiti TC","HeitiTC-Light","LiHei","微軟正黑體","Lato","Verdana","Source Sans Pro","Helvetica Neue";
+}
+
+body {
+  height: 100vh;
+  background: #eee;
+}
+
+// 垂直置中
+.page-wrapper {
+  height: 100%;
+  width: 100%;
+  display: table;
+  @media screen and (max-width: 930px) {
+    height: auto;
+    width: auto;
+  }
+}
+
+.vertical-middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.login-container {
+  width: 930px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 930px) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    // background-image: url(https://hahow.in/assets/images/auth/auth-img-s.jpg);
+    // background-size: cover;
+    // filter: blur(10px);
+
+
+    &:before {
+      content: "";
+      background-image: url(https://hahow.in/assets/images/auth/auth-img-s.jpg);
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      filter: blur(10px);
+      transform: scale(1.1);
+    }
+  }
+}
+
+.login-img {
+  width: 600px;
+  height: 450px;
+  margin-top: 20px;
+  float: left;
+  background-image: url('https://hahow.in/assets/images/auth/auth-img.jpg');
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 0 17px rgba(0,0,0,.24);
+
+  @media screen and (max-width: 930px) {
+    display: none;
+  }
+}
+
+.login-form {
+  width: 330px;
+  padding-bottom: 60px;
+  float: left;
+  box-shadow: 0 0 17px rgba(0,0,0,.24);
+  border-radius: 3px;
+  background: #fff;
+
+  @media screen and (max-width: 930px) {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .login-form-heading {
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    margin: 0;
+    padding: 20px 0;
+    font-size: 20px;
+    color: rgba(0,0,0,.65);
+  }
+
+  .social-login {
+    button {
+      margin: 0 auto 15px auto;
+      display: block;
+      width: 265px;
+      height: 45px;
+      line-height: 35px;
+      color: #fff;
+      border-radius: 3px;
+      cursor: pointer;
+
+
+
+      em {
+        width: 35px;
+        height: 45px;
+        display: inline-block;
+        vertical-align: top;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      span {
+        line-height: 40px;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+
+    }
+    .facebook {
+      margin-top: 20px;
+      background: linear-gradient(#2953ad,#234ca2);
+      border: 1px solid #2e487a;
+      em {
+        background-image: url('https://hahow.in/assets/images/icon/login-facebook.svg');
+
+      }
+
+      &:hover {
+        background: linear-gradient(#5179d0,#5179d0);
+      }
+
+    }
+
+    .google {
+      background: linear-gradient(#d73d32,#dd4b39);
+      border: 1px solid #a91d0f;
+      em {
+        background-image: url('https://hahow.in/assets/images/icon/login-google.svg');
+      }
+
+      &:hover {
+        background: linear-gradient(#ed7263,#ed7263);
+      }
+    }
+  }
+
+  .divider {
+    margin: 20px auto;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    hr {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      height: 1px;
+      border: none;
+      background: rgba(0,0,0,.12);
+    }
+
+    span {
+      position: relative;
+      padding: 0 1em;
+      top: -3px;
+      background: #fff;
+      color: rgba(0,0,0,.43);
+    }
+
+  }
+
+  form {
+    margin: 0 auto;
+    width: 265px;
+    .input-group {
+      margin-bottom: 20px;
+      position: relative;
+      transition: .2s;
+
+      i {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        font-size: 20px;
+      }
+
+      input {
+        transition: .2s;
+        width: 265px;
+        padding: 14px 0 14px 40px;
+        box-sizing: border-box;
+        border: 1px solid rgba(0,0,0,.12);
+        border-radius: 3px;
+        &::placeholder {
+          color: #ccc;
+          font-size: 16px;
+        }
+
+        &:focus {
+          outline: none;
+          border: 1px solid rgba(0,0,0,.8);
+        }
+      }
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #ccc;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 18px;
+      cursor: inherit;
+    }
+
+    .forgot-signup {
+      margin: 20px 0;
+      a {
+        text-decoration: none;
+        color: rgba(0,0,0,.65);
+      }
+      .signup {
+        float: right;
+        text-decoration: underline;
+        color: #fa8b00;
+      }
+    }
+  }
+}

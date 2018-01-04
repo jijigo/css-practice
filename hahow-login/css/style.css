@@ -1,0 +1,170 @@
+@charset "UTF-8";
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: "Heiti TC","HeitiTC-Light","LiHei","微軟正黑體","Lato","Verdana","Source Sans Pro","Helvetica Neue"; }
+
+body {
+  height: 100vh;
+  background: #eee; }
+
+.page-wrapper {
+  height: 100%;
+  width: 100%;
+  display: table; }
+  @media screen and (max-width: 930px) {
+    .page-wrapper {
+      height: auto;
+      width: auto; } }
+
+.vertical-middle {
+  display: table-cell;
+  vertical-align: middle; }
+
+.login-container {
+  width: 930px;
+  margin: 0 auto; }
+  @media screen and (max-width: 930px) {
+    .login-container {
+      width: 100%;
+      height: 100%;
+      position: absolute; }
+      .login-container:before {
+        content: "";
+        background-image: url(https://hahow.in/assets/images/auth/auth-img-s.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        filter: blur(10px);
+        transform: scale(1.1); } }
+
+.login-img {
+  width: 600px;
+  height: 450px;
+  margin-top: 20px;
+  float: left;
+  background-image: url("https://hahow.in/assets/images/auth/auth-img.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 0 17px rgba(0, 0, 0, 0.24); }
+  @media screen and (max-width: 930px) {
+    .login-img {
+      display: none; } }
+
+.login-form {
+  width: 330px;
+  padding-bottom: 60px;
+  float: left;
+  box-shadow: 0 0 17px rgba(0, 0, 0, 0.24);
+  border-radius: 3px;
+  background: #fff; }
+  @media screen and (max-width: 930px) {
+    .login-form {
+      float: none;
+      margin: 0 auto; } }
+  .login-form .login-form-heading {
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    margin: 0;
+    padding: 20px 0;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.65); }
+  .login-form .social-login button {
+    margin: 0 auto 15px auto;
+    display: block;
+    width: 265px;
+    height: 45px;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer; }
+    .login-form .social-login button em {
+      width: 35px;
+      height: 45px;
+      display: inline-block;
+      vertical-align: top;
+      background-repeat: no-repeat;
+      background-position: center center; }
+    .login-form .social-login button span {
+      line-height: 40px;
+      font-size: 14px;
+      letter-spacing: 1px; }
+  .login-form .social-login .facebook {
+    margin-top: 20px;
+    background: linear-gradient(#2953ad, #234ca2);
+    border: 1px solid #2e487a; }
+    .login-form .social-login .facebook em {
+      background-image: url("https://hahow.in/assets/images/icon/login-facebook.svg"); }
+    .login-form .social-login .facebook:hover {
+      background: linear-gradient(#5179d0, #5179d0); }
+  .login-form .social-login .google {
+    background: linear-gradient(#d73d32, #dd4b39);
+    border: 1px solid #a91d0f; }
+    .login-form .social-login .google em {
+      background-image: url("https://hahow.in/assets/images/icon/login-google.svg"); }
+    .login-form .social-login .google:hover {
+      background: linear-gradient(#ed7263, #ed7263); }
+  .login-form .divider {
+    margin: 20px auto;
+    position: relative;
+    text-align: center;
+    width: 100%; }
+    .login-form .divider hr {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      height: 1px;
+      border: none;
+      background: rgba(0, 0, 0, 0.12); }
+    .login-form .divider span {
+      position: relative;
+      padding: 0 1em;
+      top: -3px;
+      background: #fff;
+      color: rgba(0, 0, 0, 0.43); }
+  .login-form form {
+    margin: 0 auto;
+    width: 265px; }
+    .login-form form .input-group {
+      margin-bottom: 20px;
+      position: relative;
+      transition: .2s; }
+      .login-form form .input-group i {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        font-size: 20px; }
+      .login-form form .input-group input {
+        transition: .2s;
+        width: 265px;
+        padding: 14px 0 14px 40px;
+        box-sizing: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 3px; }
+        .login-form form .input-group input::placeholder {
+          color: #ccc;
+          font-size: 16px; }
+        .login-form form .input-group input:focus {
+          outline: none;
+          border: 1px solid rgba(0, 0, 0, 0.8); }
+    .login-form form .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #ccc;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 18px;
+      cursor: inherit; }
+    .login-form form .forgot-signup {
+      margin: 20px 0; }
+      .login-form form .forgot-signup a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.65); }
+      .login-form form .forgot-signup .signup {
+        float: right;
+        text-decoration: underline;
+        color: #fa8b00; }
